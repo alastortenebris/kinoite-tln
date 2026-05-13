@@ -6,5 +6,8 @@
 set -oue pipefail
 
 # Your code goes here.
-echo 'This is an example shell script'
-echo 'Scripts here will run during build if specified in recipe.yml'
+
+echo 'Installing ProtonVPN'
+dnf install -y https://repo.protonvpn.com/fedora-44-stable/protonvpn-stable-release/protonvpn-stable-release-1.0.4-1.noarch.rpm
+# The install errors out unless we do it like this.
+dnf install -y proton-vpn-gnome-desktop --setopt=install_weak_deps=False || true
