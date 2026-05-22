@@ -29,6 +29,10 @@ modules:
         - scx-manager
         - distrobox
         - libavcodec-freeworld
+        - mesa-va-drivers-freeworld
+        - mesa-vulkan-drivers-freeworld
+        - libheif-freeworld
+        - gstreamer1-plugin-libav
         - rocm-hip
         - rocm-clinfo
         - rocm-opencl
