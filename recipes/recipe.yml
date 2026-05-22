@@ -30,7 +30,6 @@ modules:
         - distrobox
         - libavcodec-freeworld
         - mesa-va-drivers-freeworld
-        - mesa-vulkan-drivers-freeworld
         - libheif-freeworld
         - gstreamer1-plugin-libav
         - rocm-hip
@@ -45,6 +44,11 @@ modules:
         - firefox-langpacks
         - krfb
         - toolbox
+    replace:
+      - from-repo: rpmfusion
+        packages:
+          - old: mesa-vulkan-drivers
+            new: mesa-vulkan-drivers-freeworld
   - type: script
     scripts:
         - example.sh # example: run files/scripts/myscript.sh
