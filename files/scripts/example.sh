@@ -13,4 +13,4 @@ dnf install -y https://repo.protonvpn.com/fedora-44-stable/protonvpn-stable-rele
 dnf install -y proton-vpn-gnome-desktop --setopt=install_weak_deps=False || true
 
 #fix ffmpeg
-dnf -y distro-sync
+# dnf -y distro-sync
