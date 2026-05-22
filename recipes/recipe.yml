@@ -45,7 +45,7 @@ modules:
         - krfb
         - toolbox
     replace:
-     # - from-repo: rpmfusion
+      - from-repo: rpmfusion-free
         packages:
           - old: mesa-vulkan-drivers
             new: mesa-vulkan-drivers-freeworld
