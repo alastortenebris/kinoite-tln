@@ -32,7 +32,6 @@ modules:
         - scx-manager
         - distrobox
         - libavcodec-freeworld
-        - proton-vpn-gtk-app
         - steam
         - rocm-hip
         - rocm-clinfo
