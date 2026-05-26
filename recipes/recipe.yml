@@ -18,6 +18,14 @@ modules:
       nonfree: rpmfusion
       copr:
         - bieszczaders/kernel-cachyos-addons
+      repo:
+        - https://cdn.jsdelivr.net/gh/terrapkg/packages@refs/heads/frawhide/anda/terra/release/terra.repo
+    install:
+      packages:
+        - terra-release
+        - terra-gpg-keys
+        - terra-release-mesa
+  - type: dnf
     install:
       packages:
         - hardinfo2
@@ -28,10 +36,8 @@ modules:
         - scx-scheds
         - scx-manager
         - distrobox
+        - proton-vpn-gtk-app
         - libavcodec-freeworld
-        - mesa-va-drivers-freeworld
-        - libheif-freeworld
-        - gstreamer1-plugin-libav
         - rocm-hip
         - rocm-clinfo
         - rocm-opencl
@@ -49,8 +55,8 @@ modules:
         packages:
           - old: mesa-vulkan-drivers
             new: mesa-vulkan-drivers-freeworld
-  - type: script
-    scripts:
-        - example.sh # example: run files/scripts/myscript.sh
+#  - type: script
+#    scripts:
+#        - example.sh # example: run files/scripts/myscript.sh
       
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
