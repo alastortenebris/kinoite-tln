@@ -14,5 +14,5 @@ set -oue pipefail
 
 #fix ffmpeg
 echo 'Enabling Terra'
-dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release terra-gpg-keys terra-release-mesa
+dnf install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release terra-gpg-keys terra-release-mesa
 dnf -y distro-sync
