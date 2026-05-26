@@ -18,7 +18,7 @@ modules:
       nonfree: rpmfusion
       copr:
         - bieszczaders/kernel-cachyos-addons
-      repo:
+      files:
         - https://cdn.jsdelivr.net/gh/terrapkg/packages@refs/heads/frawhide/anda/terra/release/terra.repo
     install:
       packages:
