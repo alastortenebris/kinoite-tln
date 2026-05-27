@@ -37,6 +37,7 @@ modules:
         - rocm-clinfo
         - rocm-opencl
         - rocm-smi
+        - plasma-firewall-firewalld
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
@@ -45,5 +46,6 @@ modules:
         - firefox-langpacks
         - krfb
         - toolbox
+        - firewall-config
       
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
