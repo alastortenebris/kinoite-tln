@@ -32,7 +32,6 @@ modules:
         - scx-manager
         - distrobox
         - libavcodec-freeworld
-        - steam
         - rocm-hip
         - rocm-clinfo
         - rocm-opencl
