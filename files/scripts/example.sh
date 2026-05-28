@@ -7,12 +7,8 @@ set -oue pipefail
 
 # Your code goes here.
 
-#echo 'Installing ProtonVPN'
+echo 'Installing ProtonVPN'
 dnf install -y https://repo.protonvpn.com/fedora-44-stable/protonvpn-stable-release/protonvpn-stable-release-1.0.4-1.noarch.rpm
 # The install errors out unless we do it like this.
 dnf install -y proton-vpn-gtk-app --setopt=install_weak_deps=False || true
 
-#fix ffmpeg
-echo 'Enabling Terra'
-dnf install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release terra-gpg-keys terra-release-mesa
-dnf -y distro-sync
