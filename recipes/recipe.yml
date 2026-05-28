@@ -46,11 +46,20 @@ modules:
         - krfb
         - toolbox
         - firewall-config
+        - plasma-welcome
     replace:
      - from-repo: fedora-multimedia
        packages:
           - old: libavcodec-free
             new: libavcodec
           - mesa-filesystem
+          - mesa-dri-drivers
+          - mesa-libEGL
+          - mesa-libGL
+          - mesa-libgbm
+          - mesa-va-drivers
+          - mesa-vulkan-drivers
+          - libva
+          - libheif
       
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
