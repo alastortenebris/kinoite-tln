@@ -46,10 +46,10 @@ modules:
         - krfb
         - toolbox
         - firewall-config
-      replace:
-        - from-repo: fedora-multimedia
-          packages:
-            - libavcodec
-            - mesa-filsystem
+    replace:
+     - from-repo: fedora-multimedia
+       packages:
+          - libavcodec
+          - mesa-filsystem
       
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
