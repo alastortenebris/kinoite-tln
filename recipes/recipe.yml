@@ -18,7 +18,8 @@ modules:
         - example.sh # example: run files/scripts/myscript.sh
   - type: dnf
     repos:
-      nonfree: rpmfusion
+      files:
+        - https://negativo17.org/repos/fedora-multimedia.repo
       copr:
         - bieszczaders/kernel-cachyos-addons
     install:
@@ -31,7 +32,6 @@ modules:
         - scx-scheds
         - scx-manager
         - distrobox
-        - libavcodec-freeworld
         - rocm-hip
         - rocm-clinfo
         - rocm-opencl
@@ -46,5 +46,10 @@ modules:
         - krfb
         - toolbox
         - firewall-config
+      replace:
+        - from-repo: fedora-multimedia
+          packages:
+            - libavcodec
+            - mesa-filsystem
       
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
