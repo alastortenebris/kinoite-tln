@@ -13,12 +13,8 @@ image-version: 44 # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - type: script
-    scripts:
-        - example.sh # example: run files/scripts/myscript.sh
   - type: dnf
     repos:
-      nonfree: rpmfusion
       copr:
         - bieszczaders/kernel-cachyos-addons
     install:
@@ -36,8 +32,6 @@ modules:
         - rocm-opencl
         - rocm-smi
         - plasma-firewall-firewalld
-        - libavcodec-freeworld
-        - mesa-va-drivers-freeworld.x86_64
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
@@ -47,10 +41,8 @@ modules:
         - krfb
         - toolbox
         - firewall-config
-    replace:
-     - from-repo: rpmfusion-free
-       packages:
-          - old: mesa-vulkan-drivers
-            new: mesa-vulkan-drivers-freeworld
+  - type: script
+    scripts:
+        - example.sh # example: run files/scripts/myscript.sh
       
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
