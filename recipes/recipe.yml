@@ -18,8 +18,7 @@ modules:
         - example.sh # example: run files/scripts/myscript.sh
   - type: dnf
     repos:
-      files:
-        - https://negativo17.org/repos/fedora-multimedia.repo
+      nonfree: rpmfusion
       copr:
         - bieszczaders/kernel-cachyos-addons
     install:
@@ -37,6 +36,8 @@ modules:
         - rocm-opencl
         - rocm-smi
         - plasma-firewall-firewalld
+        - libavcodec-freeworld
+        - mesa-va-drivers-freeworld.x86_64
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
@@ -46,20 +47,10 @@ modules:
         - krfb
         - toolbox
         - firewall-config
-        - plasma-welcome
     replace:
-     - from-repo: fedora-multimedia
+     - from-repo: rpmfusion-free
        packages:
-          - old: libavcodec-free
-            new: libavcodec
-          - mesa-filesystem
-          - mesa-dri-drivers
-          - mesa-libEGL
-          - mesa-libGL
-          - mesa-libgbm
-          - mesa-va-drivers
-          - mesa-vulkan-drivers
-          - libva
-          - libheif
+          - old: mesa-vulkan-drivers
+            new: mesa-vulkan-drivers-freeworld
       
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
