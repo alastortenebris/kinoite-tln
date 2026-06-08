@@ -15,6 +15,8 @@ image-version: 44 # latest is also supported if you want new updates ASAP
 modules:
   - type: dnf
     repos:
+      files:
+        - https://repository.mullvad.net/rpm/stable/mullvad.repo
       copr:
         - bieszczaders/kernel-cachyos-addons
     install:
@@ -33,6 +35,7 @@ modules:
         - rocm-smi
         - plasma-firewall-firewalld
         - tailscale
+        - mullvad-vpn
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
