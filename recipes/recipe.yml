@@ -21,6 +21,7 @@ modules:
         - bieszczaders/kernel-cachyos-addons
     install:
       packages:
+        - iwd
         - hardinfo2
         - fonts-tweak-tool
         - ksystemlog
@@ -34,7 +35,6 @@ modules:
         - rocm-opencl
         - rocm-smi
         - plasma-firewall-firewalld
-        - tailscale
         - mullvad-vpn
     remove:
       packages:
