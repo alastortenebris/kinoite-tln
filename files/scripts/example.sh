@@ -18,3 +18,4 @@ echo 'Installing extras'
 dnf install -y libavcodec-freeworld --no-allow-downgrade
 dnf install -y mesa-va-drivers-freeworld.x86_64 --no-allow-downgrade
 dnf swap -y mesa-vulkan-drivers mesa-vulkan-drivers-freeworld
+dnf install -y pipewire-codec-aptx
