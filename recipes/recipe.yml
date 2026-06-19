@@ -21,7 +21,6 @@ modules:
         - bieszczaders/kernel-cachyos-addons
     install:
       packages:
-        - iwd
         - hardinfo2
         - fonts-tweak-tool
         - ksystemlog
