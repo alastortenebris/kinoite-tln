@@ -1,3 +1,5 @@
+This is a version of Fedora Kinoite intended for my personal use. Use at your own risk.
+
 # kinoite-tln &nbsp; [![bluebuild build badge](https://github.com/alastortenebris/kinoite-tln/actions/workflows/build.yml/badge.svg)](https://github.com/alastortenebris/kinoite-tln/actions/workflows/build.yml)
 
 See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
