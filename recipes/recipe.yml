@@ -19,6 +19,7 @@ modules:
         - bieszczaders/kernel-cachyos-addons
     install:
       packages:
+        - iwd
         - fonts-tweak-tool
         - ksystemlog
         - fish
