@@ -23,7 +23,6 @@ modules:
         - fonts-tweak-tool
         - ksystemlog
         - fish
-        - android-tools
         - scx-scheds
         - scx-manager
         - distrobox
