@@ -17,6 +17,7 @@ modules:
     repos:
       copr:
         - bieszczaders/kernel-cachyos-addons
+        - ilyaz/LACT
     install:
       packages:
         - iwd
@@ -32,6 +33,7 @@ modules:
         - rocm-smi
         - plasma-firewall-firewalld
         - steam-devices
+        - lact
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
