@@ -22,4 +22,4 @@ dnf install -y pipewire-codec-aptx --no-allow-downgrade
 dnf install -y libheif-freeworld --no-allow-downgrade
 
 echo 'Enabling Terra'
-dnf install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$(rpm --eval '%{fedora}')' terra-release terra-gpg-keys
+dnf install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release terra-gpg-keys
