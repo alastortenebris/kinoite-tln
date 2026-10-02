@@ -13,6 +13,9 @@ image-version: 44 # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
+  - type: script
+    scripts:
+        - example.sh # example: run files/scripts/myscript.sh
   - type: dnf
     repos:
       copr:
@@ -43,9 +46,6 @@ modules:
         - krfb
         - toolbox
         - firewall-config
-  - type: script
-    scripts:
-        - example.sh # example: run files/scripts/myscript.sh
   - from-file: modules/nix.yaml
   - type: files
     files:
