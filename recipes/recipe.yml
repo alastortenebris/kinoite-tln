@@ -19,7 +19,6 @@ modules:
   - type: dnf
     repos:
       copr:
-        - bieszczaders/kernel-cachyos-addons
         - ilyaz/LACT
     install:
       packages:
@@ -28,7 +27,7 @@ modules:
         - ksystemlog
         - fish
         - scx-scheds
-        - scx-manager
+        - scx-tools
         - distrobox
         - rocm-hip
         - rocm-clinfo
