@@ -20,3 +20,6 @@ dnf install -y mesa-va-drivers-freeworld.x86_64 --no-allow-downgrade
 dnf swap -y mesa-vulkan-drivers mesa-vulkan-drivers-freeworld
 dnf install -y pipewire-codec-aptx --no-allow-downgrade
 dnf install -y libheif-freeworld --no-allow-downgrade
+
+echo 'Enabling Terra'
+dnf install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$(rpm --eval '%{fedora}')' terra-release terra-gpg-keys
