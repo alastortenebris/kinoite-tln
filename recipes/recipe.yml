@@ -17,9 +17,9 @@ modules:
     scripts:
         - example.sh # example: run files/scripts/myscript.sh
   - type: dnf
-    repos:
-      copr:
-        - ilyaz/LACT
+    #repos:
+    #  copr:
+    #    - ilyaz/LACT
     install:
       packages:
         - iwd
