@@ -15,11 +15,11 @@ set -oue pipefail
 echo 'Enabling RPMFusion'
 dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 echo 'Installing Restricted Addons'
-dnf install -y libavcodec-freeworld --no-allow-downgrade
+dnf install -y libavcodec-freeworld.x86_64 --no-allow-downgrade
 dnf install -y mesa-va-drivers-freeworld.x86_64 --no-allow-downgrade
 dnf swap -y mesa-vulkan-drivers mesa-vulkan-drivers-freeworld
-dnf install -y pipewire-codec-aptx --no-allow-downgrade
-dnf install -y libheif-freeworld --no-allow-downgrade
+dnf install -y pipewire-codec-aptx.x86_64 --no-allow-downgrade
+dnf install -y libheif-freeworld.x86_64 --no-allow-downgrade
 
 echo 'Enabling Terra'
 dnf install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release terra-gpg-keys
