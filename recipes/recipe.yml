@@ -21,9 +21,10 @@ modules:
     scripts:
         - example.sh # example: run files/scripts/myscript.sh
   - type: dnf
-    #repos:
-    #  copr:
-    #    - ilyaz/LACT
+    repos:
+      copr:
+        - bieszczaders/kernel-cachyos-addons
+        - ilyaz/LACT
     install:
       packages:
         - iwd
@@ -31,7 +32,6 @@ modules:
         - ksystemlog
         - fish
         - scx-scheds
-        - scx-tools
         - distrobox
         - rocm-hip
         - rocm-clinfo

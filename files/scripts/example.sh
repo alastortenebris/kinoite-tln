@@ -21,5 +21,5 @@ dnf swap -y mesa-vulkan-drivers mesa-vulkan-drivers-freeworld
 dnf install -y pipewire-codec-aptx.x86_64 --no-allow-downgrade
 dnf install -y libheif-freeworld.x86_64 --no-allow-downgrade
 
-echo 'Enabling Terra'
-dnf install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release terra-gpg-keys
+#echo 'Enabling Terra'
+#dnf install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release terra-gpg-keys
