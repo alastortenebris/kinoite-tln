@@ -52,7 +52,7 @@ modules:
         - krfb
         - toolbox
         - firewall-config
-  - from-file: modules/nix.yaml
+  # - from-file: modules/nix.yaml
   - type: files
     files:
       - source: system   # copies `files/system/*` (* means everything inside it) into your image's root folder `/`
