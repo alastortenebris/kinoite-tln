@@ -1,0 +1,11 @@
+[Unit]
+Description=Link the running kernel config for scx_loader
+After=local-fs.target
+Before=scx_loader.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bash -ec 'kver=$(/usr/bin/uname -r); src=/usr/lib/modules/$kver/config; dst=/boot/config-$kver; test -r "$src" || { echo "Kernel config not found: $src" >&2; exit 1; }; /usr/bin/ln -sfn "$src" "$dst"'
+
+[Install]
+WantedBy=multi-user.target
