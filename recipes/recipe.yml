@@ -32,6 +32,7 @@ modules:
         - ksystemlog
         - fish
         - scx-scheds
+        - scx-tools
         - distrobox
         - rocm-hip
         - rocm-clinfo
