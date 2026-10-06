@@ -14,7 +14,7 @@ set -oue pipefail
 
 #scx_loader doesn't work unless this is done
 echo "Symlinking Kconfig"
-ln -s /lib/modules/$(uname -r)/build/.config /boot/config-$(uname -r)
+ln -s /lib/modules/$(uname -r)/config /boot/config-$(uname -r)
 
 echo 'Enabling RPMFusion'
 dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
