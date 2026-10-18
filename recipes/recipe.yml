@@ -23,7 +23,7 @@ modules:
   - type: dnf
     repos:
       copr:
-        - bieszczaders/kernel-cachyos
+        - bieszczaders/kernel-cachyos-addons
         - ilyaz/LACT
     install:
       packages:
