@@ -23,7 +23,6 @@ modules:
   - type: dnf
     repos:
       copr:
-        - bieszczaders/kernel-cachyos-addons
         - bieszczaders/kernel-cachyos
         - ilyaz/LACT
     install:
@@ -48,8 +47,6 @@ modules:
         # Way too many appimages are broken if this is not installed
         - fuse
         - fuse-libs
-        - kernel-cachyos
-        - kernel-cachyos-devel-matched
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
@@ -59,7 +56,6 @@ modules:
         - krfb
         - toolbox
         - firewall-config
-        - kernel
   - type: files
     files:
       - source: system   # copies `files/system/*` (* means everything inside it) into your image's root folder `/`
