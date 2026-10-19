@@ -12,10 +12,10 @@ set -oue pipefail
 # The install errors out unless we do it like this.
 # dnf install -y proton-vpn-gtk-app --setopt=install_weak_deps=False || true
 
-echo 'Installing Kernel'
-dnf copr enable -y bieszczaders/kernel-cachyos
-dnf remove -y kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra 
-dnf install -y kernel-cachyos kernel-cachyos-devel-matched
+echo 'Installing udev addons'
+dnf -y copr enable ublue-os/packages
+dnf config-manager --set-disabled "copr:copr.fedorainfracloud.org:ublue-os:packages"
+dnf -y --enablerepo copr:copr.fedorainfracloud.org:ublue-os:packages install ublue-os-udev-rules
 
 echo 'Enabling RPMFusion'
 dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -24,7 +24,7 @@ dnf install -y libavcodec-freeworld.x86_64 --no-allow-downgrade
 dnf install -y mesa-va-drivers-freeworld.x86_64 --no-allow-downgrade
 dnf swap -y mesa-vulkan-drivers mesa-vulkan-drivers-freeworld
 dnf install -y pipewire-codec-aptx.x86_64 --no-allow-downgrade
-# dnf install -y libheif-freeworld.x86_64 --no-allow-downgrade
+dnf install -y libheif-freeworld.x86_64 --no-allow-downgrade
 
 #echo 'Enabling Terra'
 #dnf install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release terra-gpg-keys
