@@ -14,7 +14,7 @@ set -oue pipefail
 
 echo 'Installing udev addons'
 dnf -y copr enable ublue-os/packages
-dnf config-manager --set-disabled "copr:copr.fedorainfracloud.org:ublue-os:packages"
+dnf config-manager disable "copr:copr.fedorainfracloud.org:ublue-os:packages"
 dnf -y --enablerepo copr:copr.fedorainfracloud.org:ublue-os:packages install ublue-os-udev-rules
 
 echo 'Enabling RPMFusion'
