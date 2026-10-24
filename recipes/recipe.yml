@@ -28,6 +28,7 @@ modules:
     install:
       packages:
         - iwd
+        - hardinfo2
         - fonts-tweak-tool
         - ksystemlog
         - fish
@@ -40,9 +41,6 @@ modules:
         - rocm-smi
         - plasma-firewall-firewalld
         - steam-devices
-        - steam
-        - gamescope
-        - mangohud
         - lact
         # Way too many appimages are broken if this is not installed
         - fuse
