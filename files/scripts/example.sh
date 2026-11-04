@@ -20,11 +20,13 @@ dnf -y --enablerepo copr:copr.fedorainfracloud.org:ublue-os:packages install ubl
 echo 'Enabling RPMFusion'
 dnf install -y https://mirror.leaseweb.net/rpmfusion/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirror.leaseweb.net/rpmfusion/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 echo 'Installing Restricted Addons'
+# --no-allow-downgrade and specifying the architecture prevents installing the 32bit versions and downgrading libavcodec or mesa 
 dnf install -y libavcodec-freeworld.x86_64 --no-allow-downgrade
 dnf install -y mesa-va-drivers-freeworld.x86_64 --no-allow-downgrade
 dnf swap -y mesa-vulkan-drivers mesa-vulkan-drivers-freeworld
 dnf install -y pipewire-codec-aptx.x86_64 --no-allow-downgrade
-dnf install -y libheif-freeworld.x86_64 --no-allow-downgrade
+#This is nice to have, but this is the most common RPMFusion desync, so make it optional.
+dnf install -y libheif-freeworld.x86_64 --no-allow-downgrade || true
 
 #echo 'Enabling Terra'
 #dnf install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release terra-gpg-keys
