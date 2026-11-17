@@ -43,6 +43,8 @@ modules:
         # Way too many appimages are broken if this is not installed
         - fuse
         - fuse-libs
+        # VSCode breaks if this isn't installed?
+        - openssl3-libs
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
