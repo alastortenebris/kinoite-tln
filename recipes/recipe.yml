@@ -24,6 +24,7 @@ modules:
     repos:
       copr:
         - bieszczaders/kernel-cachyos-addons
+        - @rocm-packagers-sig/RH
     install:
       packages:
         - iwd
